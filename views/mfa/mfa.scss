@@ -1,0 +1,22 @@
+#mfa-success-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 15px;
+
+  .white-box {
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media all and (max-width: 767px) {
+    .white-box {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,219 @@
+#app-dashboard-page {
+  #app-dashboard-pageHeader {
+    display: flex;
+    align-items: center;
+    
+    > h2 {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    > img {
+      width: 120px;
+    }
+    > div {
+      margin-left: auto;
+      margin-right: 0;
+
+      .btn {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  #app-dashboard-info {
+    width: 100%;
+    background: #F1F5F6;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+
+    > div {
+      &:first-child {
+        width: calc(100% - 300px);
+        flex: 0 0 calc(100% - 300px);
+        padding: 10px 15px;
+
+        > div {
+          display: flex;
+          align-items: center;
+
+          &:last-child {
+            justify-content: flex-end;
+          }
+        }
+
+        article {
+          flex: 1;
+          a {
+            cursor: pointer;
+          }
+        }
+
+        section {
+          text-align: right;
+        }
+      }
+      &:last-child {
+        width: 300px;
+        flex: 0 0 300px;
+        text-align: right;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 15px;
+      }
+    }
+  }
+
+  #app-dashboard-pageGraph {
+    margin-top: 2rem;
+    width: 100%;
+    border: 1px solid #C2D2D9;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    #app-dashboard-pageGraph__canvas {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .recharts-default-legend {
+      li {
+        > span {
+          color: #324750 !important;
+          font-size: 13px !important;
+        }
+      }
+    }
+    .recharts-layer.recharts-cartesian-axis.recharts-xAxis.xAxis {
+      font-size: 11px;
+      font-weight: 500;
+      color: #4F717F;
+    }
+    .recharts-layer.recharts-cartesian-axis.recharts-yAxis.yAxis {
+      font-size: 11px;
+      font-weight: 500;
+      color: #4F717F;
+      > line {
+        display: none !important;
+      }
+    }
+  }
+
+  #app-users-section {
+    background-color: #F1F5F6 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .table-wrapper {
+      padding: 1rem;
+      .rdt_TableHeadRow, .rdt_TableRow, .rdt_Pagination {
+        background-color: #F1F5F6 !important;
+      }
+      .rdt_Table > div:last-child {
+        background-color: #F1F5F6 !important;
+      }
+    }
+  }
+
+  #app-users-sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    h3 {
+      margin-left: 0;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+  }
+
+  #app-tx-section {
+    background-color: #F1F5F6 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .table-wrapper {
+      padding: 1rem;
+      .rdt_TableHeadRow, .rdt_TableRow, .rdt_Pagination {
+        background-color: #F1F5F6 !important;
+      }
+      .rdt_Table > div:last-child {
+        background-color: #F1F5F6 !important;
+      }
+    }
+  }
+
+  #app-tx-sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    h3 {
+      margin-left: 0;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media all and (max-width: 991px) {
+    #app-users-sectionHeader,
+    #app-tx-sectionHeader {
+      display: block;
+      > div:first-child {
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+      }
+      a {
+        margin: 0.5rem 0 0 0 !important;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    #app-dashboard-info {
+      display: block;
+      padding: 1rem;
+      > div {
+        &:first-child {
+          width: 100%;
+          flex: auto;
+          padding: 1rem 0;
+        }
+        &:last-child {
+          width: 100%;
+          flex: auto;
+          border-left: none;
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 2rem 0 1rem 0;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 767px) {
+    #app-dashboard-info {
+      > div {
+        &:first-child {
+          display: flex;
+          flex-direction: column-reverse;
+
+          > article {
+            margin-top: 1rem;
+          }
+          > section {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

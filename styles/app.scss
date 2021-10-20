@@ -1,0 +1,188 @@
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "font";
+@import "normalize";
+@import "vendor";
+@import "global";
+
+#__next, #app-wrapper, #app {
+  width: 100%;
+}
+
+#app-wrapper {
+  position: relative;
+}
+
+// Table Stuff
+.table-wrapper {
+  margin-top: 2rem;
+
+  .rdt_Table {
+    border-top: 1px solid #C2D2D9;
+    border-bottom: 1px solid #C2D2D9;
+    
+    .rdt_TableHead {
+      .rdt_TableHeadRow {
+        min-height: 40px !important;
+      }
+
+      .rdt_TableCol {
+        color: #324750 !important;
+        font-size: 11px !important;
+        font-weight: 600 !important;
+
+        * {
+          color: #324750 !important;
+          font-size: 11px !important;
+          font-weight: 600 !important;
+        }
+      }
+    }
+
+    .rdt_TableBody {
+      .rdt_TableCell {
+        color: #324750 !important;
+        font-size: 11px !important;
+        font-weight: 400 !important;
+        line-height: 1.2 !important;
+      }
+    }
+
+    .overflow-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 11px !important;
+    }
+    
+    .user-name-box {
+      position: relative;
+      width: 100%;
+
+      label {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 11px !important;
+      }
+
+      > div {
+        display: none;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 17px;
+        left: 0;
+        a:first-child {
+          font-size: 11px;
+          color: #0376BC !important;
+          margin-right: 7px;
+          cursor: pointer;
+          &:hover {
+            text-decoration: none !important;
+          }
+        }
+        a:last-child {
+          font-size: 11px;
+          color: #DE4A0B !important;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .rdt_TableRow:hover {
+      .user-name-box {
+        > div {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .rdt_Pagination {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid #C2D2D9;
+
+    > span {
+      font-size: 13px !important;
+      color: #7398A8 !important;
+    }
+  }
+}
+
+.user-status-box {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 1px 4px;
+
+  &.active {
+    background: #42C27D !important;
+    color: white !important;
+  }
+
+  &.pending {
+    color: white !important;
+    background: #324750 !important;
+  }
+
+  &.revoked {
+    color: #7398A8 !important;
+    border: 1px solid #7398A8 !important;
+  }
+}
+
+.access-group-actions {
+  display: flex;
+  align-items: center;
+
+  a {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    &:first-child {
+      margin-right: 1rem;
+    }
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.app-iprange-input-itemWrap {
+  width: 100%;
+  margin-bottom: 1rem;
+  .app-iprange-input-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    > span {
+      width: 32px;
+      height: 32px;
+      border-radius: 2px;
+      background: #F6F6F6;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+
+      * {
+        cursor: pointer;
+      }
+    }
+
+    .custom-form-control {
+      max-width: 320px;
+    }
+  }
+}
+
+.text-link {
+  color: #0376BC;
+  text-decoration: underline;
+}

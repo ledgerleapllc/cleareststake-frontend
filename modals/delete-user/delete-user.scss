@@ -1,0 +1,24 @@
+#delete-user-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  p {
+    color: #DE4A0B;
+    font-size: 13px;
+  }
+
+  #delete-user-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}

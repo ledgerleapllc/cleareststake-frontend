@@ -1,0 +1,56 @@
+.c-block-alert {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  
+  &.success {
+    background-color: #DCF4E7;
+    #c-block-alert__icon {
+      svg {
+        color: #42C27D;
+      }
+    }
+  }
+
+  &.info {
+    background-color: #D9F0FE;
+    #c-block-alert__icon {
+      svg {
+        color: #0376BC;
+      }
+    }
+  }
+
+  &.warning {
+    background-color: #FFF3CC;
+    #c-block-alert__icon {
+      svg {
+        color: #FFC400;
+      }
+    }
+  }
+
+  &.danger {
+    background-color: #FEF0EA;
+    #c-block-alert__icon {
+      svg {
+        color: #DE4A0B;
+      }
+    }
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  #c-block-alert__closeIcon {
+    margin-left: auto;
+    margin-right: 0;
+    cursor: pointer;
+  }
+}

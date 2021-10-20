@@ -1,0 +1,60 @@
+#app-profile-page {
+  h2 {
+    font-size: 28px;
+  }
+  .c-form-row {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    span {
+      display: block;
+      color: black;
+      height: 40px;
+    }
+
+    small {
+      font-size: 11px;
+      line-height: 1.4 !important;
+      display: block;
+      margin-top: 8px;
+    }
+  }
+
+  #app-profile-page__buttons {
+    display: flex;
+    align-items: center;
+
+    .btn {
+      margin-right: 8px;
+    }
+  }
+
+  #twoFA-title {
+    display: flex;
+    align-items: center;
+
+    .twoFA-status-on {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      background: #42C27D;
+      border-radius: 4px;
+      padding: 1px 3px;
+      margin-left: 8px;
+    }
+
+    .twoFA-status-off {
+      font-size: 14px;
+      font-weight: 600;
+      color: #7398A8;
+      border: 1px solid #7398A8;
+      border-radius: 4px;
+      padding: 1px 3px;
+      margin-left: 8px;
+    }
+  }
+}

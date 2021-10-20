@@ -1,0 +1,31 @@
+.verification-item {
+  width: 262px;
+  background: #F1F5F6;
+  border-radius: 4px;
+  padding: 1rem 10px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+
+  .verification-itemHeader {
+    display: flex;
+    align-items: center;
+
+    > span {
+      width: 22px;
+      line-height: 1;
+    }
+
+    > label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .verification-itemBody {
+    margin-top: 8px;
+    padding-left: 22px;
+    p {
+      font-size: 13px;
+    }
+  }
+}

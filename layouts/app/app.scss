@@ -1,0 +1,19 @@
+.app-page-wrap {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &.no-overflow {
+    overflow: hidden;
+  }
+
+  > section {
+    flex: 1;
+    min-height: fit-content;
+    padding: 40px 0;
+  }
+}
