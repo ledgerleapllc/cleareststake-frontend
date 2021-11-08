@@ -9,6 +9,8 @@
 
 Relies on NextJS/Vercel, and NodeJS version 14+
 
+First we need a server to use. Apache/Nginx
+
 ```bash
 sudo apt -y install apache2
 sudo a2enmod rewrite
