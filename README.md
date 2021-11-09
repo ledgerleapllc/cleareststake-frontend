@@ -49,9 +49,3 @@ npm run build-export
 ```
 
 The above commands will build **out/** on site using the variables from your .env.production file.
-
-### Contributing
-
-Fork and create a PR if you find and want to provide improvements.
-
-For security related issues, please email thomas@ledgerleap.com
