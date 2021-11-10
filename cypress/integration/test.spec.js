@@ -1,4 +1,5 @@
 const dev_email = Cypress.env('DEV_EMAIL');
+const do_newuser = true;
 
 function makeid(length) {
 	var result = '';
@@ -22,7 +23,28 @@ function makeemail() {
 	return prepend + '@' + append;
 }
 
+function makepw() {
+	var result = '';
+	var uppers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	var lowers = 'abcdefghijklmnopqrstuvwxyz';
+	var nums = '1234567890';
+	var specials = '!@#$%^&*()_+';
+	var uppers_length = uppers.length;
+	var lowers_length = lowers.length;
+	var nums_length = nums.length;
+	var specials_length = specials.length;
+	for(var i = 0; i < 3; i++) {
+		result += uppers.charAt(Math.floor(Math.random() * uppers_length));
+		result += lowers.charAt(Math.floor(Math.random() * lowers_length));
+		result += nums.charAt(Math.floor(Math.random() * nums_length));
+		result += specials.charAt(Math.floor(Math.random() * specials_length));
+	}
+	return result;
+}
+
 describe('Full test of critical functionality', () => {
+	let total_token_balance = 0
+
 	beforeEach(() => {
 		cy.restoreLocalStorage()
 	})
@@ -49,14 +71,59 @@ describe('Full test of critical functionality', () => {
 		cy.wait(1000)
 	})
 
-	it('should add user', () => {
-		cy.get('a').contains('Add User').click()
-		cy.get('input').eq(0).clear().type(makeid(5))
-		cy.get('input').eq(1).clear().type(makeid(5))
-		cy.get('input').eq(2).clear().type(makeemail())
-		cy.get('select').eq(0).select(1)
-		cy.get('input').eq(3).clear().type(12345)
-		cy.get('button').contains('Save User').click()
+	it('should get total_token_balance', () => {
+		cy.get('h2').eq(1).then((e) => {
+			total_token_balance = parseInt(e.text().replace(',', ''))
+			console.log(total_token_balance);
+		})
 	})
 
+	if(do_newuser) {
+		it('should add user', () => {
+			cy.wait(500)
+			cy.get('a').contains('Add User').click()
+			cy.get('input').eq(0).clear().type(makeid(5))
+			cy.get('input').eq(1).clear().type(makeid(5))
+			cy.get('input').eq(2).clear().type(makeemail())
+			cy.get('select').eq(0).select(1)
+			cy.get('input').eq(3).clear().type(12345)
+			cy.get('button').contains('Save User').click()
+		})
+	}
+
+	console.log(total_token_balance);
+
+	it('should reset password', () => {
+		cy.wait(500)
+		cy.get('a').contains('Reset Password').eq(0).click()
+		let new_pw = makepw()
+		cy.get('input:first').clear().type(new_pw)
+		cy.get('input').eq(1).clear().type(new_pw)
+		cy.get('a').contains('Reset Password').eq(0).click()
+	})
+
+	it('should update for inflation by 50 tokens', () => {
+		cy.wait(500)
+		cy.get('a').contains('Update for Inflation').click()
+		cy.get('input:first').clear().type(total_token_balance + 50)
+		cy.get('button').contains('Submit').click()
+	})
+
+	it('should process a deposit', () => {
+		cy.wait(500)
+		cy.get('a').contains('Process Deposit').click()
+		cy.get('select').eq(0).select(1)
+		cy.wait(100)
+		cy.get('input:first').clear().type(3)
+		cy.get('a').contains('Submit').click()
+	})
+
+	it('should process a withdraw', () => {
+		cy.wait(500)
+		cy.get('a').contains('Process Withdraw').click()
+		cy.get('select').eq(0).select(1)
+		cy.wait(100)
+		cy.get('input:first').clear().type(1)
+		cy.get('a').contains('Submit').click()
+	})
 })
