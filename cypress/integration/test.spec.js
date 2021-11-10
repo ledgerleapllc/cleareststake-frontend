@@ -22,7 +22,7 @@ function makeemail() {
 	return prepend + '@' + append;
 }
 
-describe('Test', () => {
+describe('Full test of critical functionality', () => {
 	beforeEach(() => {
 		cy.restoreLocalStorage()
 	})
@@ -48,10 +48,6 @@ describe('Test', () => {
 		cy.contains('Casper Token Total Balance')
 		cy.wait(1000)
 	})
-
-	// it('should reload dashboard', () => {
-	// 	cy.visit('/')
-	// })
 
 	it('should add user', () => {
 		cy.get('a').contains('Add User').click()
