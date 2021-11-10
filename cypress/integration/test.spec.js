@@ -1,4 +1,4 @@
-const dev_email = 'thomas@ledgerleap.com';
+const dev_email = Cypress.env('DEV_EMAIL');
 
 function makeid(length) {
 	var result = '';
@@ -37,9 +37,9 @@ describe('Test', () => {
 	})
 
 	it('should login', () => {
-		cy.get('input:first').clear().type('demo@devxdao.com')
+		cy.get('input:first').clear().type(Cypress.env('ADMIN_LOGIN_EMAIL'))
 		cy.get('input:last').clear()
-			.type('fixfqC3ofz')
+			.type(Cypress.env('ADMIN_LOGIN_PASSWORD'))
 			.type('{enter}')
 	})
 
