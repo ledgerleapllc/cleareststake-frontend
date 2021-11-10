@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "cypress-open": "cypress open",
-    "cypress-run": "cypress run"
+    "cypress-run": "cypress run --spec cypress/integration/test.spec.js --browser chrome --headless"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
