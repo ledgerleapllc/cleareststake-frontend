@@ -23,6 +23,14 @@ function makeemail() {
 }
 
 describe('Test', () => {
+	beforeEach(() => {
+		cy.restoreLocalStorage()
+	})
+
+	afterEach(() => {
+		cy.saveLocalStorage()
+	})
+
 	it('should load the login screen', () => {
 		cy.visit('/')
 		cy.contains('Sign In')
@@ -36,10 +44,16 @@ describe('Test', () => {
 	})
 
 	it('should load dashboard', () => {
+		cy.location('pathname').should('eq', '/app')
 		cy.contains('Casper Token Total Balance')
+		cy.wait(1000)
 	})
 
-	it('add user', () => {
+	// it('should reload dashboard', () => {
+	// 	cy.visit('/')
+	// })
+
+	it('should add user', () => {
 		cy.get('a').contains('Add User').click()
 		cy.get('input').eq(0).clear().type(makeid(5))
 		cy.get('input').eq(1).clear().type(makeid(5))
@@ -48,4 +62,5 @@ describe('Test', () => {
 		cy.get('input').eq(3).clear().type(12345)
 		cy.get('button').contains('Save User').click()
 	})
+
 })

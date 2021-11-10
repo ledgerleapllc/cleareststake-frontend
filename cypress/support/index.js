@@ -18,3 +18,7 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.Cookies.defaults({
+	preserve: ["XSRF-TOKEN", "myapp_session", "remember_token"]
+});
