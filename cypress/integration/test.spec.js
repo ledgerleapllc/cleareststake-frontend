@@ -1,5 +1,5 @@
 const dev_email = Cypress.env('DEV_EMAIL');
-const do_newuser = true;
+const do_newuser = false;
 
 function makeid(length) {
 	var result = '';
@@ -68,7 +68,7 @@ describe('Full test of critical functionality', () => {
 	it('should load dashboard', () => {
 		cy.location('pathname').should('eq', '/app')
 		cy.contains('Casper Token Total Balance')
-		cy.wait(1000)
+		cy.wait(2000)
 	})
 
 	it('should get total_token_balance', () => {
@@ -80,12 +80,23 @@ describe('Full test of critical functionality', () => {
 
 	if(do_newuser) {
 		it('should add user', () => {
-			cy.wait(500)
+			cy.wait(2000)
 			cy.get('a').contains('Add User').click()
 			cy.get('input').eq(0).clear().type(makeid(5))
-			cy.get('input').eq(1).clear().type(makeid(5))
+			cy.get('input').eq(1).clear().type('testuser')
 			cy.get('input').eq(2).clear().type(makeemail())
 			cy.get('select').eq(0).select(1)
+			cy.get('input').eq(3).clear().type(12345)
+			cy.get('button').contains('Save User').click()
+		})
+
+		it('should add fund user', () => {
+			cy.wait(2000)
+			cy.get('a').contains('Add User').click()
+			cy.get('input').eq(0).clear().type(makeid(5))
+			cy.get('input').eq(1).clear().type('testfunduser')
+			cy.get('input').eq(2).clear().type(makeemail())
+			cy.get('select').eq(0).select(2)
 			cy.get('input').eq(3).clear().type(12345)
 			cy.get('button').contains('Save User').click()
 		})
@@ -94,7 +105,7 @@ describe('Full test of critical functionality', () => {
 	console.log(total_token_balance);
 
 	it('should reset password', () => {
-		cy.wait(500)
+		cy.wait(2000)
 		cy.get('a').contains('Reset Password').eq(0).click()
 		let new_pw = makepw()
 		cy.get('input:first').clear().type(new_pw)
@@ -103,27 +114,39 @@ describe('Full test of critical functionality', () => {
 	})
 
 	it('should update for inflation by 50 tokens', () => {
-		cy.wait(500)
+		cy.wait(2000)
 		cy.get('a').contains('Update for Inflation').click()
 		cy.get('input:first').clear().type(total_token_balance + 50)
 		cy.get('button').contains('Submit').click()
 	})
 
 	it('should process a deposit', () => {
-		cy.wait(500)
+		cy.wait(2000)
 		cy.get('a').contains('Process Deposit').click()
 		cy.get('select').eq(0).select(1)
 		cy.wait(100)
-		cy.get('input:first').clear().type(3)
+		cy.get('input:first').clear().type(60)
 		cy.get('a').contains('Submit').click()
 	})
 
 	it('should process a withdraw', () => {
-		cy.wait(500)
+		cy.wait(2000)
 		cy.get('a').contains('Process Withdraw').click()
 		cy.get('select').eq(0).select(1)
 		cy.wait(100)
-		cy.get('input:first').clear().type(1)
+		cy.get('input:first').clear().type(10)
 		cy.get('a').contains('Submit').click()
+	})
+
+	it('should process a fund sale', () => {
+		cy.wait(2000)
+		cy.get('a').contains('Fund Sale').click()
+		cy.get('input:first').clear().type(45)
+		cy.get('input[type="checkbox"]').eq(0).check()
+		cy.get('button').contains('Next').eq(0).click()
+		cy.get('input:first').clear().type(0.125)
+		cy.get('button').contains('Confirm').eq(0).click()
+		cy.wait(500)
+		cy.get('button').contains('Back').eq(0).click()
 	})
 })
