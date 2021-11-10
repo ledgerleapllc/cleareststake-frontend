@@ -1,8 +1,0 @@
-{
-	"baseUrl": "https://cleareststake.com",
-	"env": {
-		"DEV_EMAIL": "thomas@ledgerleap.com",
-		"ADMIN_LOGIN_EMAIL": "demo@devxdao.com",
-		"ADMIN_LOGIN_PASSWORD": "fixfqC3ofz"
-	}
-}
