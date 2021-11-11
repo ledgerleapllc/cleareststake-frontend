@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev --port=3002",
     "build": "eslint . && next build",
-    "build-export": "eslint . && next build && next export && ./build-htaccess",
+    "build-export": "eslint . && next build && next export",
     "start": "next start",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "cypress-open": "cypress open",
+    "cypress-run": "cypress run --spec cypress/integration/test.spec.js --browser chrome --headless"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -45,6 +47,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "cypress": "^8.7.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
