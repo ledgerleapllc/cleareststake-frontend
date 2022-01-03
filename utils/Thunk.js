@@ -235,6 +235,7 @@ export function resetUserPassword(params, start, completion) {
     if (start) start();
     API.resetUserPassword(params).then((res) => {
       if (!res.success) dispatch(showAlert(res.message, "warning", "center"));
+      if (res.success === true) dispatch(showAlert(res.message, "success", "center"));
       if (completion) completion(res);
     });
   };
