@@ -12,8 +12,6 @@ import {
 import Helper from "../../utils/Helper";
 import { resetUserPassword } from "../../utils/Thunk";
 
-import "./reset-user-password.scss";
-
 const mapStateToProps = (state) => {
   return {
     resetPasswordUserData: state.modal.resetPasswordUserData,

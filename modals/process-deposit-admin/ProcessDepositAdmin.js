@@ -13,8 +13,6 @@ import {
 import Helper from "../../utils/Helper";
 import { getAllUsers, depositAdmin } from "../../utils/Thunk";
 
-import "./process-deposit-admin.scss";
-
 const mapStateToProps = () => {
   return {};
 };

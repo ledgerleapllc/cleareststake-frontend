@@ -15,8 +15,6 @@ import {
   showAlert,
 } from "../../../redux/actions";
 
-import "./users.scss";
-
 const mapStateToProps = (state) => {
   return {
     blockAlertData: state.global.blockAlertData,

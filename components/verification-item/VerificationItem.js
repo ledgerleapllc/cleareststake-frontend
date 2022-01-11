@@ -2,8 +2,6 @@ import React, { Component, Fragment } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import * as Icon from "react-feather";
 
-import "./verification-item.scss";
-
 class VerificationItem extends Component {
   render() {
     const { title, content } = this.props;

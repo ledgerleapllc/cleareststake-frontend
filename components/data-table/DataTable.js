@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 
 import { useTable, usePagination, useRowSelect } from "react-table";
-import "./data-table.scss";
 
 const IndeterminateCheckbox = React.forwardRef(
   ({ indeterminate, ...rest }, ref) => {

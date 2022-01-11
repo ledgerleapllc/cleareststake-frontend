@@ -7,8 +7,6 @@ import { showCanvas, hideCanvas } from "../../../redux/actions";
 import Helper from "../../../utils/Helper";
 import { finishInvitation, getInvitationData } from "../../../utils/Thunk";
 
-import "./invitation.scss";
-
 const mapStateToProps = () => {
   return {};
 };

@@ -8,8 +8,6 @@ import {
   showAlert,
 } from "../../redux/actions";
 
-import "./revoke-user.scss";
-
 const mapStateToProps = (state) => {
   return {
     revokeUserData: state.modal.revokeUserData,

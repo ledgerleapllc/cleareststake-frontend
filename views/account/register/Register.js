@@ -6,8 +6,6 @@ import { showAlert } from "../../../redux/actions";
 import { COUNTRYLIST } from "../../../utils/Constant";
 import Helper from "../../../utils/Helper";
 
-import "./register.scss";
-
 const mapStateToProps = () => {
   return {};
 };

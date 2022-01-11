@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as Icon from "react-feather";
 
-import "./block-alert.scss";
-
 const mapStateToProps = () => {
   return {};
 };

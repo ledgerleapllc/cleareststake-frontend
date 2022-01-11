@@ -20,8 +20,6 @@ import {
 } from "recharts";
 import { getGraphInfo } from "../../../utils/Thunk";
 
-import "./main.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

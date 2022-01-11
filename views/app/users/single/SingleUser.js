@@ -15,8 +15,6 @@ import { hideCanvas, showCanvas, showAlert } from "../../../../redux/actions";
 
 import LogsTable from "./Logs";
 
-import "./single-user.scss";
-
 const moment = require("moment");
 
 const mapStateToProps = (state) => {

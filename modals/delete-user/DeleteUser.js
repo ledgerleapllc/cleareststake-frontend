@@ -8,8 +8,6 @@ import {
   showAlert,
 } from "../../redux/actions";
 
-import "./delete-user.scss";
-
 const mapStateToProps = (state) => {
   return {
     deleteUserData: state.modal.deleteUserData,

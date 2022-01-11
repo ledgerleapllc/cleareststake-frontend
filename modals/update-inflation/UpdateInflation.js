@@ -13,8 +13,6 @@ import {
 import Helper from "../../utils/Helper";
 import { updateInflation } from "../../utils/Thunk";
 
-import "./update-inflation.scss";
-
 const mapStateToProps = (state) => {
   return {
     globalSettings: state.global.globalSettings,

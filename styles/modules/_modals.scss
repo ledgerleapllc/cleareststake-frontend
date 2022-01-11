@@ -1,0 +1,358 @@
+#get-help-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  textarea {
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #get-help-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#process-deposit-admin-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  select, input {
+    display: block;
+    margin-top: 8px;
+    height: 36px;
+  }
+
+  #process-deposit-admin-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#process-withdraw-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  select, input {
+    display: block;
+    margin-top: 8px;
+    height: 36px;
+  }
+
+  #process-withdraw-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#process-withdraw-admin-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  select, input {
+    display: block;
+    margin-top: 8px;
+    height: 36px;
+  }
+
+  #process-withdraw-admin-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#reset-user-password-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  ul {
+    list-style: inside;
+  }
+
+  input {
+    margin-top: 8px;
+  }
+
+  #reset-user-password-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#revoke-user-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  p {
+    color: #DE4A0B;
+    font-size: 13px;
+  }
+
+  #revoke-user-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#update-inflation-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  #update-inflation-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#browser-not-supported-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  #browser-not-supported-modal__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#cancel-user-invite-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  #cancel-user-invite-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#change-password-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 417px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  h3 {
+    font-size: 20px;
+  }
+
+  ul {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    list-style: inside;
+    li {
+      font-size: 13px;
+    }
+  }
+
+  .c-form-row {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  #change-password-modal__buttons {
+    display: flex;
+    align-items: center;
+    .btn {
+      margin-right: 8px;
+    }
+  }
+}
+
+#custom-confirm-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  p {
+    font-size: 13px;
+  }
+
+  #custom-confirm-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#custom-general-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  p {
+    font-size: 13px;
+  }
+
+  #custom-general-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#delete-user-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 508px;
+  max-width: 100%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  p {
+    color: #DE4A0B;
+    font-size: 13px;
+  }
+
+  #delete-user-modal__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+#process-fund-sale-modal {
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  width: 70%;
+  padding: 24px 32px;
+  margin: 3rem auto;
+
+  input {
+    display: block;
+  }
+
+  #process-fund-sale-modal__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+    .btn {
+      margin-right: 15px;
+    }
+  }
+}

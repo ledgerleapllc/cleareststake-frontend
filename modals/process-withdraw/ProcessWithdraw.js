@@ -13,8 +13,6 @@ import {
 import Helper from "../../utils/Helper";
 import { withdrawUser } from "../../utils/Thunk";
 
-import "./process-withdraw.scss";
-
 // eslint-disable-next-line no-undef
 const moment = require("moment");
 

@@ -9,8 +9,6 @@ import { showAlert, showCanvas, hideCanvas } from "../../../../redux/actions";
 import Helper from "../../../../utils/Helper";
 import { inviteUser } from "../../../../utils/Thunk";
 
-import "./new-user.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

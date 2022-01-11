@@ -6,8 +6,6 @@ import {
   setCancelInviteUserData,
 } from "../../redux/actions";
 
-import "./cancel-user-invite.scss";
-
 const mapStateToProps = (state) => {
   return {
     cancelInviteUserData: state.modal.cancelInviteUserData,

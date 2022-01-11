@@ -13,8 +13,6 @@ import {
 import Helper from "../../utils/Helper";
 import { getAllUsers, withdrawAdmin } from "../../utils/Thunk";
 
-import "./process-withdraw-admin.scss";
-
 const mapStateToProps = () => {
   return {};
 };

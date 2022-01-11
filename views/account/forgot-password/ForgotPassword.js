@@ -5,7 +5,6 @@ import { FormInputComponent } from "../../../components";
 import { hideCanvas, showAlert, showCanvas } from "../../../redux/actions";
 import Helper from "../../../utils/Helper";
 import { sendResetEmail } from "../../../utils/Thunk";
-import "./forgot-password.scss";
 
 const mapStateToProps = () => {
   return {};

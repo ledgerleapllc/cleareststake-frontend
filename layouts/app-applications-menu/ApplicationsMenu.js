@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import "./applications-menu.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

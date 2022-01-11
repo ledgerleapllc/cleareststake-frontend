@@ -10,8 +10,6 @@ import {
 } from "../../redux/actions";
 import Helper from "../../utils/Helper";
 
-import "./custom-general.scss";
-
 const mapStateToProps = (state) => {
   return {
     customGeneralModalData: state.modal.customGeneralModalData,

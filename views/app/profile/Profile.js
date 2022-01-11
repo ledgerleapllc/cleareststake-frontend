@@ -13,8 +13,6 @@ import {
 } from "../../../redux/actions";
 import { TIMEZONES } from "../../../utils/Constant";
 
-import "./profile.scss";
-
 const mapStateToProps = (state) => {
   return {
     blockAlertData: state.global.blockAlertData,
