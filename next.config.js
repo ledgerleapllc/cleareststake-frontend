@@ -1,7 +1,5 @@
 /* global require, module */
-const withSass = require("@zeit/next-sass");
-
-module.exports = withSass({
+module.exports = {
   async rewrites() {
     return [
       // Rewrite everything else to use `pages/index`
@@ -11,4 +9,4 @@ module.exports = withSass({
       },
     ];
   },
-});
+};

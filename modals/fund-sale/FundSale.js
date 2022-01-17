@@ -15,8 +15,6 @@ import Helper from "../../utils/Helper";
 import { getUsers, addFundSale } from "../../utils/Thunk";
 import { FormInputComponent, DataTable } from "../../components";
 
-import "./fund-sale.scss";
-
 // eslint-disable-next-line no-undef
 const moment = require("moment");
 

@@ -7,8 +7,6 @@ import {
   setCustomConfirmModalData,
 } from "../../redux/actions";
 
-import "./custom-confirm.scss";
-
 const mapStateToProps = (state) => {
   return {
     customConfirmModalData: state.modal.customConfirmModalData,

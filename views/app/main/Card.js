@@ -18,8 +18,6 @@ import { setActiveModal, showCanvas, hideCanvas } from "../../../redux/actions";
 import Helper from "../../../utils/Helper";
 import { getGraphInfo } from "../../../utils/Thunk";
 
-import "./main.scss";
-
 // eslint-disable-next-line no-undef
 const moment = require("moment");
 

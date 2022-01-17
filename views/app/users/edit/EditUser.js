@@ -18,8 +18,6 @@ import {
 } from "../../../../redux/actions";
 import Helper from "../../../../utils/Helper";
 
-import "./edit-user.scss";
-
 const moment = require("moment");
 
 const mapStateToProps = (state) => {

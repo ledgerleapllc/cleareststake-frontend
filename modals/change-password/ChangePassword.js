@@ -5,8 +5,6 @@ import { FormInputComponent } from "../../components";
 import { removeActiveModal, showAlert } from "../../redux/actions";
 import Helper from "../../utils/Helper";
 
-import "./change-password.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

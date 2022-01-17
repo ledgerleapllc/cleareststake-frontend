@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import * as Icon from "react-feather";
 
-import "./mfa.scss";
-
 const mapStateToProps = () => {
   return {};
 };

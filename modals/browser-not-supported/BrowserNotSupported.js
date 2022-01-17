@@ -4,8 +4,6 @@ import { withRouter } from "react-router-dom";
 
 import { removeActiveModal } from "../../redux/actions";
 
-import "./browser-not-supported.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

@@ -7,8 +7,6 @@ import { showAlert, showCanvas, hideCanvas } from "../../../redux/actions";
 import Helper from "../../../utils/Helper";
 import { changeEmail, changePassword } from "../../../utils/Thunk";
 
-import "./settings.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

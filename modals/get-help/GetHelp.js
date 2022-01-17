@@ -10,8 +10,6 @@ import {
 } from "../../redux/actions";
 import { sendHelpRequest } from "../../utils/Thunk";
 
-import "./get-help.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

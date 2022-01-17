@@ -6,8 +6,6 @@ import UsersView from "./Users";
 import TransactionsView from "./Transactions";
 import CsprPriceView from "./CsprPrice";
 
-import "./main.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

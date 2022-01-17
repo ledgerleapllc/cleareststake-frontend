@@ -6,8 +6,6 @@ import { hideCanvas, showAlert, showCanvas } from "../../../redux/actions";
 import Helper from "../../../utils/Helper";
 import { resetPassword } from "../../../utils/Thunk";
 
-import "./reset-password.scss";
-
 const mapStateToProps = () => {
   return {};
 };

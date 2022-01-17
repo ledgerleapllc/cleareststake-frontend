@@ -6,8 +6,6 @@ import { FormInputComponent } from "../../../components";
 import { showCanvas, hideCanvas } from "../../../redux/actions";
 import { login } from "../../../utils/Thunk";
 
-import "./login.scss";
-
 const mapStateToProps = () => {
   return {};
 };
