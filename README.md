@@ -35,7 +35,7 @@ git clone https://github.com/ledgerleapllc/cleareststake-frontend
 cd cleareststake-frontend
 ```
 
-You will need to add the following code to your server configuration under the VHOST path.
+You will need to add the following code to your server configuration under the VHOST path under the Directory tag.
 
 ```
 RewriteEngine On
@@ -49,11 +49,15 @@ RewriteRule . /index.html [L]
 Install packages and setup environment. You will need to modify **.env.production** variables to fit the server on which you're deploying.
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install nodejs -y
 npm install
 npm run build-export
 ```
+
+If ```npm install``` fails, then try ```npm install --legacy-peer-deps``` instead.
+
+If ```npm build-export``` fails, then try running ``` npm run lint-fix ``` beforehand.
 
 The above commands will build **out/** on site using the variables from your .env.production file.
 
@@ -90,12 +94,3 @@ Back on the admin side of the portal the admin has further functions available n
 **Other notes -**
 
 These features were scoped and determined to be the essential features needed for fund management. All tables are optimized to show the needed information for accounting from the point of view of a staking provider or fund manager. Email any questions to team@ledgerleap.com.
-
-### Testing
-
-We use Cypress for testing the portal's critical functionality. In order to run the test suite, you will need to copy the example cypress.example.json to cypress.json and enter your variables. Then after a successful build, **npm run cypress-run** for a headless unit test, or **npm run cypress-open** for a more detailed test interface.
-
-```bash
-cp cypress.example.json cypress.json
-npm run cypress-run
-```

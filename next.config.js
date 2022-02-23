@@ -1,4 +1,4 @@
-/* global require, module */
+/* global module */
 module.exports = {
   async rewrites() {
     return [
