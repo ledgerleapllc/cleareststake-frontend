@@ -49,7 +49,7 @@ RewriteRule . /index.html [L]
 Install packages and setup environment. You will need to modify **.env.production** variables to fit the server on which you're deploying.
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 sudo apt install nodejs -y
 npm install
 npm run build-export
