@@ -53,7 +53,7 @@ export default function DataTable({
     {
       columns,
       data,
-      initialState: { pageSize: 3, pageIndex: 0 },
+      initialState: { pageSize: 10, pageIndex: 0 },
       autoResetSelectedRows: false,
       getRowId: (row) => row.id,
     },
@@ -61,14 +61,9 @@ export default function DataTable({
     useRowSelect,
     (hooks) => {
       hooks?.visibleColumns?.push((columns) => [
-        // Let's make a column for selection
         {
           id: "selection",
-          // The header can use the table's getToggleAllRowsSelectedProps method
-          // to render a checkbox
           Header: "Selling?",
-          // The cell can use the individual row's getToggleRowSelectedProps method
-          // to the render a checkbox
           Cell: ({ row }) => (
             <div>
               <IndeterminateCheckbox {...row.getToggleRowSelectedProps()} />

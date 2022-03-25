@@ -4,13 +4,7 @@ import { Fragment } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
-
-import {
-  removeActiveModal,
-  showAlert,
-  showCanvas,
-  hideCanvas,
-} from "../../redux/actions";
+import { showCanvas, hideCanvas, removeActiveModal } from "../../redux/actions";
 import Helper from "../../utils/Helper";
 import { getUsers, addFundSale } from "../../utils/Thunk";
 import { FormInputComponent, DataTable } from "../../components";
@@ -671,8 +665,7 @@ class FundSale extends Component {
   }
 
   renderColumnsTableConfirmation() {
-    const { actualTotalAmount, actualPercentOfTotalAmount, total_sale } =
-      this.state;
+    const { actualTotalAmount, total_sale } = this.state;
 
     return [
       {
@@ -769,14 +762,11 @@ class FundSale extends Component {
 
   // Render
   render() {
-    const { authUser } = this.props;
     const {
       showConfirm,
       disabled,
       notAllocateToken,
       moreAllocateToken,
-      actualTotalAmount,
-      actualPercentOfTotalAmount,
       selectedCount,
       token_sold_amount,
       token_price,
