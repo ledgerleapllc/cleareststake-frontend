@@ -71,6 +71,7 @@ const sendRequest = (
       .catch(() => {
         // Needs to login again
         Helper.removeUser();
+        window.location.reload();
 
         resolve({
           success: false,
