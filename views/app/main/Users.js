@@ -196,7 +196,7 @@ class Users extends Component {
           if (total_balance == 0) return null;
 
           let percent = (balance / total_balance) * 100;
-          percent = Helper.adjustNumericString(percent.toString(), 4);
+          percent = Helper.adjustNumericString(percent.toString(), 6);
           return (
             <div className="font-size-14">
               {Helper.formatNumber(percent) + "%"}

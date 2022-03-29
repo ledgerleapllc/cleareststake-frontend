@@ -145,7 +145,7 @@ class FundSale extends Component {
       let percent = selectedFundTotal
         ? (+item.percent_of_fund_total / +selectedFundTotal) * 100
         : 0;
-      percent = percent ? Helper.adjustNumericString(percent.toString(), 4) : 0;
+      percent = percent ? Helper.adjustNumericString(percent.toString(), 6) : 0;
       let amountSold = token_sold_amount
         ? (token_sold_amount / 100) * percent
         : 0;
@@ -311,7 +311,7 @@ class FundSale extends Component {
               <label className="font-size-14 percent-of-total-sold">
                 {Helper.adjustNumericString(
                   Math.round(value.actual_percent_of_sale).toString(),
-                  4
+                  6
                 )}{" "}
                 %
               </label>
@@ -326,7 +326,7 @@ class FundSale extends Component {
               {actualPercentOfTotalAmount !== null
                 ? Helper.adjustNumericString(
                     actualPercentOfTotalAmount.toString(),
-                    4
+                    6
                   )
                 : 0}{" "}
               %
@@ -369,7 +369,7 @@ class FundSale extends Component {
               total_balance = parseFloat(total_balance);
               if (total_balance == 0) return null;
               let percent = (balance / total_balance) * 100;
-              percent = Helper.adjustNumericString(percent.toString(), 4);
+              percent = Helper.adjustNumericString(percent.toString(), 6);
               row.percent_of_fund_total = percent;
               return row;
             });
@@ -434,7 +434,7 @@ class FundSale extends Component {
     if (total_balance == 0) return null;
 
     let percent = (value / Helper.unformatNumber(total_balance)) * 100;
-    percent = Helper.adjustNumericString(percent.toString(), 4);
+    percent = Helper.adjustNumericString(percent.toString(), 6);
 
     this.setState(
       { token_sold_amount: value, token_sold_percent: percent },
@@ -512,7 +512,7 @@ class FundSale extends Component {
       Math.round(+actualPercentOfTotal) + "%";
     document.getElementsByClassName("percent-of-total-sold")[index].innerHTML =
       actualPercent
-        ? Helper.adjustNumericString(actualPercent.toString(), 4) + "%"
+        ? Helper.adjustNumericString(actualPercent.toString(), 6) + "%"
         : "0%";
   };
 
@@ -709,7 +709,7 @@ class FundSale extends Component {
               <label className="font-size-14 percent-of-total-sold">
                 {Helper.adjustNumericString(
                   Math.round(value.actual_percent_of_sale).toString(),
-                  4
+                  6
                 )}{" "}
                 %
               </label>
