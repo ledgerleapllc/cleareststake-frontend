@@ -9,8 +9,8 @@ import {
   setActiveModal,
   setResetPasswordUserData,
   setUsersTableStatus,
-  hideCanvas,
   showCanvas,
+  hideCanvas,
 } from "../../../redux/actions";
 
 // eslint-disable-next-line no-undef
