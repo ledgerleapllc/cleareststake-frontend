@@ -142,9 +142,10 @@ class FundSale extends Component {
       this.state;
 
     const _users = users.map((item) => {
-      let percent = selectedFundTotal
-        ? (+item.percent_of_fund_total / +selectedFundTotal) * 100
-        : 0;
+      let percent =
+        selectedFundTotal && selectedFundTotal > 0
+          ? (+item.percent_of_fund_total / +selectedFundTotal) * 100
+          : 0;
       percent = percent ? Helper.adjustNumericString(percent.toString(), 6) : 0;
       let amountSold = token_sold_amount
         ? (token_sold_amount / 100) * percent
@@ -359,7 +360,6 @@ class FundSale extends Component {
         (res) => {
           let users = [];
           const { globalSettings } = this.props;
-
           if (res?.users?.length) {
             users = res.users.map((row) => {
               row.full_name = `${row.first_name} ${row.last_name}`;
@@ -367,7 +367,7 @@ class FundSale extends Component {
               const balance = parseFloat(row.balance);
               let total_balance = globalSettings.real_total_infund || 0;
               total_balance = parseFloat(total_balance);
-              if (total_balance == 0) return null;
+              if (total_balance == 0) return row;
               let percent = (balance / total_balance) * 100;
               percent = Helper.adjustNumericString(percent.toString(), 6);
               row.percent_of_fund_total = percent;
@@ -386,7 +386,6 @@ class FundSale extends Component {
     this.setState({ select_all: true });
   };
 
-  // Submit Form
   submit = (e) => {
     e.preventDefault();
     const { authUser } = this.props;
@@ -395,7 +394,6 @@ class FundSale extends Component {
     this.setState({ showConfirm: true });
   };
 
-  // Close
   close = (e) => {
     e.preventDefault();
     this.props.dispatch(removeActiveModal());
@@ -421,7 +419,6 @@ class FundSale extends Component {
     }
   }
 
-  // Input Amount
   inputAmount = (e) => {
     const { total_balance } = this.state;
 
@@ -481,7 +478,11 @@ class FundSale extends Component {
     const otherUsers = users.filter((item) => +item.id !== +row.id);
     const index = users.findIndex((item) => +item.id === +row.id);
     const temp = users;
-    const actualPercent = +value ? (+value * 100) / token_sold_amount : 0;
+
+    let actualPercent = 0;
+    if (token_sold_amount && token_sold_amount > 0) {
+      actualPercent = +value ? (+value * 100) / token_sold_amount : 0;
+    }
 
     if (index !== -1) {
       temp[index].actual_amount_sold = value;
@@ -579,7 +580,6 @@ class FundSale extends Component {
     );
   };
 
-  // Render Content
   renderContent() {
     const { authUser } = this.props;
     if (!authUser || !authUser.id) return null;
@@ -760,7 +760,6 @@ class FundSale extends Component {
     ];
   }
 
-  // Render
   render() {
     const {
       showConfirm,
