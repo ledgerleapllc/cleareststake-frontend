@@ -148,6 +148,16 @@ export function getValues(start, completion) {
   };
 }
 
+// Get Graph Ino with Params
+export function getGraphInfoWithParams(params, start, completion) {
+  return function () {
+    if (start) start();
+    API.getGraphInfoWithParams(params).then((res) => {
+      if (completion) completion(res);
+    });
+  };
+}
+
 // Get Graph Info
 export function getGraphInfo(start, completion) {
   return function () {

@@ -111,6 +111,11 @@ class API {
     return sendRequest("/user", params, "POST", true);
   }
 
+  // Get Graph Info with Params
+  static getGraphInfoWithParams(params) {
+    return sendRequest("/user/graph-info", params, "GET", true);
+  }
+
   // Get Graph Info
   static getGraphInfo() {
     return sendRequest("/user/graph-info", {}, "GET", true);

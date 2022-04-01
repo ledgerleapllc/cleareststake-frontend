@@ -20,14 +20,8 @@ class App extends Component {
             name="viewport"
             content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
-          {/*
-          <link rel="icon" href="/fav_32.png" sizes="32x32" />
-          <link rel="icon" href="/fav_192.png" sizes="192x192" />
-          */}
-
           <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
           <link rel="icon" href="/favicon.png" sizes="32x32" />
-
           <link
             rel="preload"
             href="/fonts/poppins/poppins-bold-webfont.woff2"
@@ -64,7 +58,6 @@ class App extends Component {
             crossorigin="anonymous"
           />
         </Head>
-
         <Router>
           <GlobalLayout />
           <Routes />
