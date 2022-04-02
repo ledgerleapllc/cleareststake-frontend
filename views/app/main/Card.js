@@ -2,21 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { Fade } from "react-reveal";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
 import Switch from "react-switch";
-
-import { setActiveModal, showCanvas, hideCanvas } from "../../../redux/actions";
+import { setActiveModal } from "../../../redux/actions";
 import Helper from "../../../utils/Helper";
-import { getGraphInfo } from "../../../utils/Thunk";
+import SimpleGraphView from "./SimpleGraph";
 
 // eslint-disable-next-line no-undef
 const moment = require("moment");
@@ -32,47 +21,8 @@ class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      graphData: [],
       fundOnlyChecked: false,
     };
-  }
-
-  componentDidMount() {
-    const { authUser } = this.props;
-    if (authUser && authUser.role == "user") this.getGraphInfo();
-  }
-
-  getGraphInfo() {
-    this.props.dispatch(
-      getGraphInfo(
-        () => {
-          this.props.dispatch(showCanvas());
-        },
-        (res) => {
-          this.props.dispatch(hideCanvas());
-          const graphData = res.graphData || [];
-          this.setState({ graphData });
-        }
-      )
-    );
-  }
-
-  renderGraph() {
-    const { authUser } = this.props;
-    const { graphData } = this.state;
-    if (!authUser || authUser.role != "user") return null;
-    return (
-      <ResponsiveContainer width="100%" height={450}>
-        <LineChart data={graphData}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="Price" stroke="#142d53" />
-        </LineChart>
-      </ResponsiveContainer>
-    );
   }
 
   clickGetHelp = (e) => {
@@ -230,7 +180,7 @@ class Card extends Component {
     return (
       <div>
         <div id="app-dashboard-pageCards">{this.renderContent()}</div>
-        <div id="app-dashboard-pageGraph">{this.renderGraph()}</div>
+        <SimpleGraphView />
       </div>
     );
   }

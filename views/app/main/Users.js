@@ -3,15 +3,14 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import DataTable from "react-data-table-component";
 import Switch from "react-switch";
-
 import { getUsers, downloadUsersCSV } from "../../../utils/Thunk";
 import Helper from "../../../utils/Helper";
 import {
   setActiveModal,
   setResetPasswordUserData,
   setUsersTableStatus,
-  hideCanvas,
   showCanvas,
+  hideCanvas,
 } from "../../../redux/actions";
 
 // eslint-disable-next-line no-undef
@@ -196,7 +195,7 @@ class Users extends Component {
           if (total_balance == 0) return null;
 
           let percent = (balance / total_balance) * 100;
-          percent = Helper.adjustNumericString(percent.toString(), 4);
+          percent = Helper.adjustNumericString(percent.toString(), 6);
           return (
             <div className="font-size-14">
               {Helper.formatNumber(percent) + "%"}

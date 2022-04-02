@@ -1,6 +1,5 @@
 /* eslint-disable react/display-name */
 import React, { useEffect, useState } from "react";
-
 import { useTable, usePagination, useRowSelect } from "react-table";
 
 const IndeterminateCheckbox = React.forwardRef(

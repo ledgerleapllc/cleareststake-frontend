@@ -72,7 +72,6 @@ const sendRequest = (
         // Needs to login again
         Helper.removeUser();
         window.location.reload();
-
         resolve({
           success: false,
           message: "Please try again later",
@@ -110,6 +109,11 @@ class API {
   // Invite User
   static inviteUser(params) {
     return sendRequest("/user", params, "POST", true);
+  }
+
+  // Get Graph Info with Params
+  static getGraphInfoWithParams(params) {
+    return sendRequest("/user/graph-info", params, "GET", true);
   }
 
   // Get Graph Info
