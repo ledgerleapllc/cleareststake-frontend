@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port=3002",
-    "build": "eslint . && next build",
-    "build-export": "eslint . && next build && next export",
+    "build": "next build",
+    "build-export": "next build && next export",
     "start": "next start",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "cypress": "cypress run",
+    "cypress-open": "cypress open"
   },
   "dependencies": {
     "@date-io/date-fns": "^1.3.13",
