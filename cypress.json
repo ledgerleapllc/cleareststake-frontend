@@ -1,0 +1,8 @@
+{
+	"baseUrl": "https://cleareststake.com",
+	"env": {
+		"DEV_EMAIL": "dev@example.com",
+		"ADMIN_LOGIN_EMAIL": "",
+		"ADMIN_LOGIN_PASSWORD": ""
+	}
+}
