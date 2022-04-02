@@ -94,3 +94,11 @@ Back on the admin side of the portal the admin has further functions available n
 **Other notes -**
 
 These features were scoped and determined to be the essential features needed for fund management. All tables are optimized to show the needed information for accounting from the point of view of a staking provider or fund manager. Email any questions to team@ledgerleap.com.
+
+### Testing
+
+We use Cypress for testing the portal's critical functionality. In order to run the test suite, you will need to copy the example cypress.example.json to cypress.json and enter your variables. Then after a successful build, **npm run cypress** for a headless unit test, or **npm run cypress-open** for a more detailed test interface.
+
+```bash
+npm run cypress
+```
