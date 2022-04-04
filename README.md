@@ -99,6 +99,8 @@ These features were scoped and determined to be the essential features needed fo
 
 We use Cypress for testing the portal's critical functionality. In order to run the test suite, you will need to open **cypress.json** and enter your credentials. Then after a successful build, **npm run cypress** for a headless unit test, or **npm run cypress-open** for a more detailed test interface.
 
+Note: cypress must be run from a server with an xserver.
+
 Example:
 ```
 {
