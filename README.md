@@ -97,7 +97,21 @@ These features were scoped and determined to be the essential features needed fo
 
 ### Testing
 
-We use Cypress for testing the portal's critical functionality. In order to run the test suite, you will need to copy the example cypress.example.json to cypress.json and enter your variables. Then after a successful build, **npm run cypress** for a headless unit test, or **npm run cypress-open** for a more detailed test interface.
+We use Cypress for testing the portal's critical functionality. In order to run the test suite, you will need to open **cypress.json** and enter your credentials. Then after a successful build, **npm run cypress** for a headless unit test, or **npm run cypress-open** for a more detailed test interface.
+
+Example:
+```
+{
+	"baseUrl": "http://cleareststake.localhost",
+	"env": {
+		"DEV_EMAIL": "test@example.com",
+		"ADMIN_LOGIN_EMAIL": "admin@example.com",
+		"ADMIN_LOGIN_PASSWORD": "password"
+	}
+}
+
+```
+then,
 
 ```bash
 npm run cypress
