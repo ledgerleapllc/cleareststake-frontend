@@ -1,5 +1,5 @@
 const dev_email = Cypress.env('DEV_EMAIL');
-const do_newuser = false;
+const do_newuser = true;
 
 function makeid(length) {
 	var result = '';
@@ -104,14 +104,14 @@ describe('Full test of critical functionality', () => {
 
 	console.log(total_token_balance);
 
-	it('should reset password', () => {
-		cy.wait(2000)
-		cy.get('a').contains('Reset Password').eq(0).click()
-		let new_pw = makepw()
-		cy.get('input:first').clear().type(new_pw)
-		cy.get('input').eq(1).clear().type(new_pw)
-		cy.get('a').contains('Reset Password').eq(0).click()
-	})
+	// it('should reset password', () => {
+	// 	cy.wait(2000)
+	// 	cy.get('a').contains('Reset Password').eq(0).click()
+	// 	let new_pw = makepw()
+	// 	cy.get('input:first').clear().type(new_pw)
+	// 	cy.get('input').eq(1).clear().type(new_pw)
+	// 	cy.get('a').contains('Reset Password').eq(0).click()
+	// })
 
 	it('should update for inflation by 50 tokens', () => {
 		cy.wait(2000)
