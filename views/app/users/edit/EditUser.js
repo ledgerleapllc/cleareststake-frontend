@@ -7,8 +7,8 @@ import {
   FormSelectComponent,
 } from "../../../../components";
 import {
-  hideCanvas,
   showAlert,
+  hideCanvas,
   setActiveModal,
   setRevokeUserData,
   setResetPasswordUserData,

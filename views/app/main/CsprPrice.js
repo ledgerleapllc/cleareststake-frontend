@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import DataTable from "react-data-table-component";
-
 import { getCSPRPrice } from "../../../utils/Thunk";
 import Helper from "../../../utils/Helper";
 import { MONTH_NUMBER } from "../../../utils/Constant";
