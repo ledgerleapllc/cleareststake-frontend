@@ -302,7 +302,6 @@ class Users extends Component {
     const { blockAlertData } = this.props;
     if (blockAlertData && blockAlertData.type == "user")
       return <BlockAlertComponent data={blockAlertData} />;
-
     return null;
   }
 

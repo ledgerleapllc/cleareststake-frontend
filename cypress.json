@@ -1,8 +1,8 @@
 {
-	"baseUrl": "http://cleareststake.localhost",
+  "baseUrl": "http://localhost:3002",
 	"env": {
 		"DEV_EMAIL": "dev@example.com",
-		"ADMIN_LOGIN_EMAIL": "admin@example.com",
-		"ADMIN_LOGIN_PASSWORD": ""
+		"ADMIN_LOGIN_EMAIL": "demo@devxdao.com",
+		"ADMIN_LOGIN_PASSWORD": "demodevxdao"
 	}
 }

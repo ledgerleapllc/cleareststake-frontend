@@ -138,7 +138,7 @@ class Card extends Component {
                 <div>{this.renderWithdrawButton()}</div>
               </article>
               <section>
-                <h2>{Helper.formatNumber(balance)}</h2>
+                <h2 id="total-balance">{Helper.formatNumber(balance)}</h2>
                 <label>= {Helper.formatNumber(usd)} USD</label>
               </section>
             </div>

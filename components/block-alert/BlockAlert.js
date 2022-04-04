@@ -7,14 +7,6 @@ const mapStateToProps = () => {
 };
 
 class BlockAlert extends Component {
-  componentDidMount() {
-    /*
-    setTimeout(() => {
-      this.close();
-    }, 3000);
-    */
-  }
-
   close() {
     //
   }

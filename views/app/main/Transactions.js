@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import DataTable from "react-data-table-component";
 import Switch from "react-switch";
-
 import {
   setActiveModal,
   setTXTableStatus,
@@ -309,16 +308,22 @@ class Transactions extends Component {
             </div>
             <div>
               <div>
-                <a className="btn btn-primary mr-3" onClick={this.clickUpdate}>
+                <a
+                  id="update-inflation-btn"
+                  className="btn btn-primary mr-3"
+                  onClick={this.clickUpdate}
+                >
                   <label className="font-size-14">Update for Inflation</label>
                 </a>
                 <a
+                  id="process-deposit-btn"
                   className="btn btn-primary mr-3"
                   onClick={this.clickProcessDeposit}
                 >
                   <label className="font-size-14">Process Deposit</label>
                 </a>
                 <a
+                  id="process-withdraw-btn"
                   className="btn btn-primary mr-3"
                   onClick={this.clickProcessWithdraw}
                 >
