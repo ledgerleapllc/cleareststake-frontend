@@ -99,9 +99,13 @@ These features were scoped and determined to be the essential features needed fo
 
 We use Cypress for testing the portal's critical functionality. In order to run the test suite, you will need to open **cypress.json** and enter your credentials. Then after a successful build, **npm run cypress** for a headless unit test, or **npm run cypress-open** for a more detailed test interface.
 
-Note: cypress must be run from a server with an xserver. Also please make sure you are running cypress fresh without any additional users and transaction information, as it may conflict with the preset rules by which the test suite is guided.
+Note: cypress must be run from a server with an xserver. Also please make sure you are running cypress fresh without any additional users and transaction information, as it may conflict with the preset rules by which the test suite is guided. Also please ensure dependencies are installed, as per Cypress documentation https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies:
 
-Example:
+```
+sudo apt install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+```
+
+Example cypress.json:
 ```
 {
 	"baseUrl": "http://cleareststake.localhost",
