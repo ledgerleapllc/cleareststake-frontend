@@ -3,6 +3,6 @@
 	"env": {
 		"DEV_EMAIL": "dev@example.com",
 		"ADMIN_LOGIN_EMAIL": "demo@devxdao.com",
-		"ADMIN_LOGIN_PASSWORD": "fixfqC3ofz"
+		"ADMIN_LOGIN_PASSWORD": "demodevxdao"
 	}
 }
