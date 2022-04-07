@@ -151,13 +151,12 @@ class CsprPrice extends Component {
     if (!authUser || authUser.role != "admin") return null;
 
     return (
-      <div id="app-users-section" className="mt-5">
-        <div id="app-users-sectionHeader">
+      <div id="app-price-section" className="mt-5">
+        <div id="app-price-sectionHeader">
           <div>
             <h3>CSPR Price</h3>
           </div>
         </div>
-
         <div className="table-wrapper">
           <DataTable
             columns={this.columns}

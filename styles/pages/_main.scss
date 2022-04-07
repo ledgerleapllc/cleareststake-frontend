@@ -141,7 +141,7 @@
     }
   }
 
-  #app-users-section {
+  #app-users-section, #app-price-section {
     background-color: #F1F5F6 !important;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -156,7 +156,7 @@
     }
   }
 
-  #app-users-sectionHeader {
+  #app-users-sectionHeader, #app-price-sectionHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,7 +199,8 @@
 
   @media all and (max-width: 991px) {
     #app-users-sectionHeader,
-    #app-tx-sectionHeader {
+    #app-tx-sectionHeader,
+    #app-price-sectionHeader {
       display: block;
       > div:first-child {
         margin-bottom: 1rem;

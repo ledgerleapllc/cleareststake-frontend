@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
+    "cypress-local": "cypress run --config baseUrl=http://localhost:3002",
     "cypress": "cypress run",
     "cypress-open": "cypress open"
   },
